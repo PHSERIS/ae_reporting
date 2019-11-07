@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Adverse Event v1.00" AsOfDateTime="2019-08-30T14:33:08" CreationDateTime="2019-08-30T14:33:08" SourceSystem="REDCap" SourceSystemVersion="8.10.18">
+<Study OID="Project.AdverseEventV100">
+<GlobalVariables>
+	<StudyName>Adverse Event v1.00</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Adverse Event v1.00".</StudyDescription>
+	<ProtocolName>Adverse Event v1.00</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:Purpose>4</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:RepeatingInstrumentsAndEvents>
+		<redcap:RepeatingInstruments>
+			<redcap:RepeatingInstrument redcap:UniqueEventName="ct_ae_log_arm_4" redcap:RepeatInstrument="clinicaltrails_ae_arm_total" redcap:CustomLabel=""/>
+		</redcap:RepeatingInstruments>
+	</redcap:RepeatingInstrumentsAndEvents>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.AdverseEventV100_2019-08-30_1433" Name="Adverse Event v1.00" redcap:RecordIdField="record_id">
+	<Protocol>
+		<StudyEventRef StudyEventOID="Event.map_arm_1" OrderNumber="1" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.worksheet_arm_2" OrderNumber="2" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.irb_ae_log_arm_3" OrderNumber="3" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.ct_ae_log_arm_4" OrderNumber="4" Mandatory="No"/>
+	</Protocol>
+	<StudyEventDef OID="Event.map_arm_1" Name="Map (Arm 1: Project Mappings)" Type="Common" Repeating="No" redcap:EventName="Map" redcap:CustomEventLabel="" redcap:UniqueEventName="map_arm_1" redcap:ArmNum="1" redcap:ArmName="Project Mappings" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.ae_mapping_and_details" OrderNumber="1" Mandatory="No" redcap:FormName="ae_mapping_and_details"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.worksheet_arm_2" Name="Worksheet (Arm 2: Worksheet)" Type="Common" Repeating="No" redcap:EventName="Worksheet" redcap:CustomEventLabel="" redcap:UniqueEventName="worksheet_arm_2" redcap:ArmNum="2" redcap:ArmName="Worksheet" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.ae_log_worksheet" OrderNumber="1" Mandatory="No" redcap:FormName="ae_log_worksheet"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.irb_ae_log_arm_3" Name="IRB AE Log (Arm 3: IRB AE Log)" Type="Common" Repeating="No" redcap:EventName="IRB AE Log" redcap:CustomEventLabel="" redcap:UniqueEventName="irb_ae_log_arm_3" redcap:ArmNum="3" redcap:ArmName="IRB AE Log" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.ae_irb_log" OrderNumber="1" Mandatory="No" redcap:FormName="ae_irb_log"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.ct_ae_log_arm_4" Name="CT AE Log (Arm 4: CT AE Log)" Type="Common" Repeating="No" redcap:EventName="CT AE Log" redcap:CustomEventLabel="" redcap:UniqueEventName="ct_ae_log_arm_4" redcap:ArmNum="4" redcap:ArmName="CT AE Log" redcap:DayOffset="1" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.clinicaltrials_ae_log" OrderNumber="1" Mandatory="No" redcap:FormName="clinicaltrials_ae_log"/>
+		<FormRef FormOID="Form.clinicaltrails_ae_arm_total" OrderNumber="2" Mandatory="No" redcap:FormName="clinicaltrails_ae_arm_total"/>
+	</StudyEventDef>
+	<FormDef OID="Form.ae_mapping_and_details" Name="AE Mapping and Details" Repeating="No" redcap:FormName="ae_mapping_and_details">
+		<ItemGroupRef ItemGroupOID="ae_mapping_and_details.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="ae_mapping_and_details.ae_mapping_and_details_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.ae_log_worksheet" Name="AE Log Worksheet" Repeating="No" redcap:FormName="ae_log_worksheet">
+		<ItemGroupRef ItemGroupOID="ae_log_worksheet.subject_id_source_ws" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="ae_log_worksheet.ae_log_worksheet_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.ae_irb_log" Name="AE IRB Log" Repeating="No" redcap:FormName="ae_irb_log">
+		<ItemGroupRef ItemGroupOID="ae_irb_log.subject_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="ae_irb_log.ae_irb_log_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.clinicaltrials_ae_log" Name="ClinicalTrials AE Log" Repeating="No" redcap:FormName="clinicaltrials_ae_log">
+		<ItemGroupRef ItemGroupOID="clinicaltrials_ae_log.adverse_event_type" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="clinicaltrials_ae_log.clinicaltrials_ae_log_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.clinicaltrails_ae_arm_total" Name="ClinicalTrails AE Arm Total" Repeating="No" redcap:FormName="clinicaltrails_ae_arm_total">
+		<ItemGroupRef ItemGroupOID="clinicaltrails_ae_arm_total.numevents" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="clinicaltrails_ae_arm_total.clinicaltrails_ae_arm_total_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="ae_mapping_and_details.record_id" Name="AE Mapping and Details" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="token" Mandatory="No" redcap:Variable="token"/>
+		<ItemRef ItemOID="study_arms_num" Mandatory="No" redcap:Variable="study_arms_num"/>
+		<ItemRef ItemOID="at_risk_per_arm" Mandatory="No" redcap:Variable="at_risk_per_arm"/>
+		<ItemRef ItemOID="study_arm_names" Mandatory="No" redcap:Variable="study_arm_names"/>
+		<ItemRef ItemOID="unique_event_name_source" Mandatory="No" redcap:Variable="unique_event_name_source"/>
+		<ItemRef ItemOID="subject_id_source" Mandatory="No" redcap:Variable="subject_id_source"/>
+		<ItemRef ItemOID="subject_id_alt" Mandatory="No" redcap:Variable="subject_id_alt"/>
+		<ItemRef ItemOID="ae_date_source" Mandatory="No" redcap:Variable="ae_date_source"/>
+		<ItemRef ItemOID="ae_date_alt" Mandatory="No" redcap:Variable="ae_date_alt"/>
+		<ItemRef ItemOID="desc_event_source" Mandatory="No" redcap:Variable="desc_event_source"/>
+		<ItemRef ItemOID="desc_event_alt" Mandatory="No" redcap:Variable="desc_event_alt"/>
+		<ItemRef ItemOID="location_source" Mandatory="No" redcap:Variable="location_source"/>
+		<ItemRef ItemOID="location_alt" Mandatory="No" redcap:Variable="location_alt"/>
+		<ItemRef ItemOID="severity_source" Mandatory="No" redcap:Variable="severity_source"/>
+		<ItemRef ItemOID="severity_alt" Mandatory="No" redcap:Variable="severity_alt"/>
+		<ItemRef ItemOID="expectedness_source" Mandatory="No" redcap:Variable="expectedness_source"/>
+		<ItemRef ItemOID="expectedness_alt" Mandatory="No" redcap:Variable="expectedness_alt"/>
+		<ItemRef ItemOID="relatedness_source" Mandatory="No" redcap:Variable="relatedness_source"/>
+		<ItemRef ItemOID="relatedness_alt" Mandatory="No" redcap:Variable="relatedness_alt"/>
+		<ItemRef ItemOID="corrective_source" Mandatory="No" redcap:Variable="corrective_source"/>
+		<ItemRef ItemOID="corrective_alt" Mandatory="No" redcap:Variable="corrective_alt"/>
+		<ItemRef ItemOID="date_reported_source" Mandatory="No" redcap:Variable="date_reported_source"/>
+		<ItemRef ItemOID="date_reported_alt" Mandatory="No" redcap:Variable="date_reported_alt"/>
+		<ItemRef ItemOID="ae_type_source" Mandatory="No" redcap:Variable="ae_type_source"/>
+		<ItemRef ItemOID="ae_type_alt" Mandatory="No" redcap:Variable="ae_type_alt"/>
+		<ItemRef ItemOID="assessment_type_source" Mandatory="No" redcap:Variable="assessment_type_source"/>
+		<ItemRef ItemOID="assessment_type_alt" Mandatory="No" redcap:Variable="assessment_type_alt"/>
+		<ItemRef ItemOID="additional_desc_source" Mandatory="No" redcap:Variable="additional_desc_source"/>
+		<ItemRef ItemOID="additional_desc_alt" Mandatory="No" redcap:Variable="additional_desc_alt"/>
+		<ItemRef ItemOID="organ_system_source" Mandatory="No" redcap:Variable="organ_system_source"/>
+		<ItemRef ItemOID="organ_system_alt" Mandatory="No" redcap:Variable="organ_system_alt"/>
+		<ItemRef ItemOID="source_vocab_source" Mandatory="No" redcap:Variable="source_vocab_source"/>
+		<ItemRef ItemOID="source_vocab_alt" Mandatory="No" redcap:Variable="source_vocab_alt"/>
+		<ItemRef ItemOID="ae_term_source" Mandatory="No" redcap:Variable="ae_term_source"/>
+		<ItemRef ItemOID="ae_term_alt" Mandatory="No" redcap:Variable="ae_term_alt"/>
+		<ItemRef ItemOID="ae_arm_source" Mandatory="No" redcap:Variable="ae_arm_source"/>
+		<ItemRef ItemOID="ae_arm_alt" Mandatory="No" redcap:Variable="ae_arm_alt"/>
+		<ItemRef ItemOID="rcrd_affected_source" Mandatory="No" redcap:Variable="rcrd_affected_source"/>
+		<ItemRef ItemOID="rcrd_affected_alt" Mandatory="No" redcap:Variable="rcrd_affected_alt"/>
+		<ItemRef ItemOID="irb_custom_1_source" Mandatory="No" redcap:Variable="irb_custom_1_source"/>
+		<ItemRef ItemOID="irb_custom_1_alt" Mandatory="No" redcap:Variable="irb_custom_1_alt"/>
+		<ItemRef ItemOID="irb_custom_2_source" Mandatory="No" redcap:Variable="irb_custom_2_source"/>
+		<ItemRef ItemOID="irb_custom_2_alt" Mandatory="No" redcap:Variable="irb_custom_2_alt"/>
+		<ItemRef ItemOID="irb_custom_3_source" Mandatory="No" redcap:Variable="irb_custom_3_source"/>
+		<ItemRef ItemOID="irb_custom_3_alt" Mandatory="No" redcap:Variable="irb_custom_3_alt"/>
+		<ItemRef ItemOID="irb_custom_4_source" Mandatory="No" redcap:Variable="irb_custom_4_source"/>
+		<ItemRef ItemOID="irb_custom_4_alt" Mandatory="No" redcap:Variable="irb_custom_4_alt"/>
+		<ItemRef ItemOID="irb_custom_5_source" Mandatory="No" redcap:Variable="irb_custom_5_source"/>
+		<ItemRef ItemOID="irb_custom_5_alt" Mandatory="No" redcap:Variable="irb_custom_5_alt"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="ae_mapping_and_details.ae_mapping_and_details_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="ae_mapping_and_details_complete" Mandatory="No" redcap:Variable="ae_mapping_and_details_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="ae_log_worksheet.subject_id_source_ws" Name="AE Log Worksheet" Repeating="No">
+		<ItemRef ItemOID="subject_id_source_ws" Mandatory="No" redcap:Variable="subject_id_source_ws"/>
+		<ItemRef ItemOID="subject_id_alt_ws" Mandatory="No" redcap:Variable="subject_id_alt_ws"/>
+		<ItemRef ItemOID="ae_date_source_ws" Mandatory="No" redcap:Variable="ae_date_source_ws"/>
+		<ItemRef ItemOID="ae_date_alt_ws" Mandatory="No" redcap:Variable="ae_date_alt_ws"/>
+		<ItemRef ItemOID="desc_event_source_ws" Mandatory="No" redcap:Variable="desc_event_source_ws"/>
+		<ItemRef ItemOID="desc_event_alt_ws" Mandatory="No" redcap:Variable="desc_event_alt_ws"/>
+		<ItemRef ItemOID="location_source_ws" Mandatory="No" redcap:Variable="location_source_ws"/>
+		<ItemRef ItemOID="location_alt_ws" Mandatory="No" redcap:Variable="location_alt_ws"/>
+		<ItemRef ItemOID="severity_source_ws" Mandatory="No" redcap:Variable="severity_source_ws"/>
+		<ItemRef ItemOID="severity_alt_ws" Mandatory="No" redcap:Variable="severity_alt_ws"/>
+		<ItemRef ItemOID="expectedness_source_ws" Mandatory="No" redcap:Variable="expectedness_source_ws"/>
+		<ItemRef ItemOID="expectedness_alt_ws" Mandatory="No" redcap:Variable="expectedness_alt_ws"/>
+		<ItemRef ItemOID="relatedness_source_ws" Mandatory="No" redcap:Variable="relatedness_source_ws"/>
+		<ItemRef ItemOID="relatedness_alt_ws" Mandatory="No" redcap:Variable="relatedness_alt_ws"/>
+		<ItemRef ItemOID="corrective_source_ws" Mandatory="No" redcap:Variable="corrective_source_ws"/>
+		<ItemRef ItemOID="corrective_alt_ws" Mandatory="No" redcap:Variable="corrective_alt_ws"/>
+		<ItemRef ItemOID="date_reported_source_ws" Mandatory="No" redcap:Variable="date_reported_source_ws"/>
+		<ItemRef ItemOID="date_reported_alt_ws" Mandatory="No" redcap:Variable="date_reported_alt_ws"/>
+		<ItemRef ItemOID="ae_type_source_ws" Mandatory="No" redcap:Variable="ae_type_source_ws"/>
+		<ItemRef ItemOID="ae_type_alt_ws" Mandatory="No" redcap:Variable="ae_type_alt_ws"/>
+		<ItemRef ItemOID="assessment_type_source_ws" Mandatory="No" redcap:Variable="assessment_type_source_ws"/>
+		<ItemRef ItemOID="assessment_type_alt_ws" Mandatory="No" redcap:Variable="assessment_type_alt_ws"/>
+		<ItemRef ItemOID="additional_desc_source_ws" Mandatory="No" redcap:Variable="additional_desc_source_ws"/>
+		<ItemRef ItemOID="additional_desc_alt_ws" Mandatory="No" redcap:Variable="additional_desc_alt_ws"/>
+		<ItemRef ItemOID="organ_system_source_ws" Mandatory="No" redcap:Variable="organ_system_source_ws"/>
+		<ItemRef ItemOID="organ_system_alt_ws" Mandatory="No" redcap:Variable="organ_system_alt_ws"/>
+		<ItemRef ItemOID="source_vocab_source_ws" Mandatory="No" redcap:Variable="source_vocab_source_ws"/>
+		<ItemRef ItemOID="source_vocab_alt_ws" Mandatory="No" redcap:Variable="source_vocab_alt_ws"/>
+		<ItemRef ItemOID="ae_term_source_ws" Mandatory="Yes" redcap:Variable="ae_term_source_ws"/>
+		<ItemRef ItemOID="ae_term_alt_ws" Mandatory="No" redcap:Variable="ae_term_alt_ws"/>
+		<ItemRef ItemOID="ae_arm_source_ws" Mandatory="No" redcap:Variable="ae_arm_source_ws"/>
+		<ItemRef ItemOID="ae_arm_alt_ws" Mandatory="No" redcap:Variable="ae_arm_alt_ws"/>
+		<ItemRef ItemOID="record_details_ws" Mandatory="No" redcap:Variable="record_details_ws"/>
+		<ItemRef ItemOID="admin_notes_ws" Mandatory="No" redcap:Variable="admin_notes_ws"/>
+		<ItemRef ItemOID="irb_custom_1_source_ws" Mandatory="No" redcap:Variable="irb_custom_1_source_ws"/>
+		<ItemRef ItemOID="irb_custom_1_alt_ws" Mandatory="No" redcap:Variable="irb_custom_1_alt_ws"/>
+		<ItemRef ItemOID="irb_custom_2_source_ws" Mandatory="No" redcap:Variable="irb_custom_2_source_ws"/>
+		<ItemRef ItemOID="irb_custom_2_alt_ws" Mandatory="No" redcap:Variable="irb_custom_2_alt_ws"/>
+		<ItemRef ItemOID="irb_custom_3_source_ws" Mandatory="No" redcap:Variable="irb_custom_3_source_ws"/>
+		<ItemRef ItemOID="irb_custom_3_alt_ws" Mandatory="No" redcap:Variable="irb_custom_3_alt_ws"/>
+		<ItemRef ItemOID="irb_custom_4_source_ws" Mandatory="No" redcap:Variable="irb_custom_4_source_ws"/>
+		<ItemRef ItemOID="irb_custom_4_alt_ws" Mandatory="No" redcap:Variable="irb_custom_4_alt_ws"/>
+		<ItemRef ItemOID="irb_custom_5_source_ws" Mandatory="No" redcap:Variable="irb_custom_5_source_ws"/>
+		<ItemRef ItemOID="irb_custom_5_alt_ws" Mandatory="No" redcap:Variable="irb_custom_5_alt_ws"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="ae_log_worksheet.ae_log_worksheet_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="ae_log_worksheet_complete" Mandatory="No" redcap:Variable="ae_log_worksheet_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="ae_irb_log.subject_id" Name="AE IRB Log" Repeating="No">
+		<ItemRef ItemOID="subject_id" Mandatory="No" redcap:Variable="subject_id"/>
+		<ItemRef ItemOID="ae_date" Mandatory="No" redcap:Variable="ae_date"/>
+		<ItemRef ItemOID="event_desc" Mandatory="No" redcap:Variable="event_desc"/>
+		<ItemRef ItemOID="location" Mandatory="No" redcap:Variable="location"/>
+		<ItemRef ItemOID="severity" Mandatory="No" redcap:Variable="severity"/>
+		<ItemRef ItemOID="expectedness" Mandatory="No" redcap:Variable="expectedness"/>
+		<ItemRef ItemOID="relatedness" Mandatory="No" redcap:Variable="relatedness"/>
+		<ItemRef ItemOID="corrective_action" Mandatory="No" redcap:Variable="corrective_action"/>
+		<ItemRef ItemOID="date_reported" Mandatory="No" redcap:Variable="date_reported"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="ae_irb_log.ae_irb_log_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="ae_irb_log_complete" Mandatory="No" redcap:Variable="ae_irb_log_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="clinicaltrials_ae_log.adverse_event_type" Name="ClinicalTrials AE Log" Repeating="No">
+		<ItemRef ItemOID="adverse_event_type" Mandatory="Yes" redcap:Variable="adverse_event_type"/>
+		<ItemRef ItemOID="assessment_type" Mandatory="No" redcap:Variable="assessment_type"/>
+		<ItemRef ItemOID="additional_description" Mandatory="No" redcap:Variable="additional_description"/>
+		<ItemRef ItemOID="organ_system_name" Mandatory="No" redcap:Variable="organ_system_name"/>
+		<ItemRef ItemOID="source_vocabulary" Mandatory="No" redcap:Variable="source_vocabulary"/>
+		<ItemRef ItemOID="ae_term" Mandatory="Yes" redcap:Variable="ae_term"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="clinicaltrials_ae_log.clinicaltrials_ae_log_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="clinicaltrials_ae_log_complete" Mandatory="No" redcap:Variable="clinicaltrials_ae_log_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="clinicaltrails_ae_arm_total.numevents" Name="ClinicalTrails AE Arm Total" Repeating="No">
+		<ItemRef ItemOID="numevents" Mandatory="No" redcap:Variable="numevents"/>
+		<ItemRef ItemOID="numsubjectsaffected" Mandatory="Yes" redcap:Variable="numsubjectsaffected"/>
+		<ItemRef ItemOID="numsubjectsatrisk" Mandatory="Yes" redcap:Variable="numsubjectsatrisk"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="clinicaltrails_ae_arm_total.clinicaltrails_ae_arm_total_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="clinicaltrails_ae_arm_total_complete" Mandatory="No" redcap:Variable="clinicaltrails_ae_arm_total_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="token" Name="token" DataType="text" Length="999" redcap:Variable="token" redcap:FieldType="text">
+		<Question><TranslatedText>API token from source project</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="study_arms_num" Name="study_arms_num" DataType="text" Length="999" redcap:Variable="study_arms_num" redcap:FieldType="text">
+		<Question><TranslatedText>Number of Study Arms</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="at_risk_per_arm" Name="at_risk_per_arm" DataType="text" Length="999" redcap:Variable="at_risk_per_arm" redcap:FieldType="text">
+		<Question><TranslatedText>Subjects At Risk Per Study Arm</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="study_arm_names" Name="study_arm_names" DataType="text" Length="999" redcap:Variable="study_arm_names" redcap:FieldType="text">
+		<Question><TranslatedText>Study Arm Names</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="unique_event_name_source" Name="unique_event_name_source" DataType="text" Length="999" redcap:Variable="unique_event_name_source" redcap:FieldType="text">
+		<Question><TranslatedText>Unique Event Name</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="subject_id_source" Name="subject_id_source" DataType="text" Length="999" redcap:Variable="subject_id_source" redcap:FieldType="text">
+		<Question><TranslatedText>Subject ID Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="subject_id_alt" Name="subject_id_alt" DataType="text" Length="999" redcap:Variable="subject_id_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Subject ID Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_date_source" Name="ae_date_source" DataType="text" Length="999" redcap:Variable="ae_date_source" redcap:FieldType="text">
+		<Question><TranslatedText>Date of Adverse Event Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_date_alt" Name="ae_date_alt" DataType="text" Length="999" redcap:Variable="ae_date_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Date of Adverse Event Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="desc_event_source" Name="desc_event_source" DataType="text" Length="999" redcap:Variable="desc_event_source" redcap:FieldType="text">
+		<Question><TranslatedText>Description of events Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="desc_event_alt" Name="desc_event_alt" DataType="text" Length="999" redcap:Variable="desc_event_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Description of events Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="location_source" Name="location_source" DataType="text" Length="999" redcap:Variable="location_source" redcap:FieldType="text">
+		<Question><TranslatedText>Location Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="location_alt" Name="location_alt" DataType="text" Length="999" redcap:Variable="location_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Location Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="severity_source" Name="severity_source" DataType="text" Length="999" redcap:Variable="severity_source" redcap:FieldType="text">
+		<Question><TranslatedText>Severity Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="severity_alt" Name="severity_alt" DataType="text" Length="999" redcap:Variable="severity_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Severity Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="expectedness_source" Name="expectedness_source" DataType="text" Length="999" redcap:Variable="expectedness_source" redcap:FieldType="text">
+		<Question><TranslatedText>Expectedness Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="expectedness_alt" Name="expectedness_alt" DataType="text" Length="999" redcap:Variable="expectedness_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Expectedness Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="relatedness_source" Name="relatedness_source" DataType="text" Length="999" redcap:Variable="relatedness_source" redcap:FieldType="text">
+		<Question><TranslatedText>Relatedness Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="relatedness_alt" Name="relatedness_alt" DataType="text" Length="999" redcap:Variable="relatedness_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Relatedness Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="corrective_source" Name="corrective_source" DataType="text" Length="999" redcap:Variable="corrective_source" redcap:FieldType="text">
+		<Question><TranslatedText>Changes-Corrective Action Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="corrective_alt" Name="corrective_alt" DataType="text" Length="999" redcap:Variable="corrective_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Changes-Corrective Action Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="date_reported_source" Name="date_reported_source" DataType="text" Length="999" redcap:Variable="date_reported_source" redcap:FieldType="text">
+		<Question><TranslatedText>Date Reported to PHRC, if available Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="date_reported_alt" Name="date_reported_alt" DataType="text" Length="999" redcap:Variable="date_reported_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Date Reported to PHRC, if available Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_type_source" Name="ae_type_source" DataType="text" Length="999" redcap:Variable="ae_type_source" redcap:FieldType="text">
+		<Question><TranslatedText>Adverse Event Type Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_type_alt" Name="ae_type_alt" DataType="text" Length="999" redcap:Variable="ae_type_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Adverse Event Type Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="assessment_type_source" Name="assessment_type_source" DataType="text" Length="999" redcap:Variable="assessment_type_source" redcap:FieldType="text">
+		<Question><TranslatedText>Assessment Type Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="assessment_type_alt" Name="assessment_type_alt" DataType="text" Length="999" redcap:Variable="assessment_type_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Assessment Type Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="additional_desc_source" Name="additional_desc_source" DataType="text" Length="999" redcap:Variable="additional_desc_source" redcap:FieldType="text">
+		<Question><TranslatedText>Additional Description</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="additional_desc_alt" Name="additional_desc_alt" DataType="text" Length="999" redcap:Variable="additional_desc_alt" redcap:FieldType="text">
+		<Question><TranslatedText> Additional Description Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="organ_system_source" Name="organ_system_source" DataType="text" Length="999" redcap:Variable="organ_system_source" redcap:FieldType="text">
+		<Question><TranslatedText>Organ System Name Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="organ_system_alt" Name="organ_system_alt" DataType="text" Length="999" redcap:Variable="organ_system_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Organ System Name Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="source_vocab_source" Name="source_vocab_source" DataType="text" Length="999" redcap:Variable="source_vocab_source" redcap:FieldType="text">
+		<Question><TranslatedText>Source Vocabulary Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="source_vocab_alt" Name="source_vocab_alt" DataType="text" Length="999" redcap:Variable="source_vocab_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Source Vocabulary Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_term_source" Name="ae_term_source" DataType="text" Length="999" redcap:Variable="ae_term_source" redcap:FieldType="text">
+		<Question><TranslatedText>Adverse Event Term Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_term_alt" Name="ae_term_alt" DataType="text" Length="999" redcap:Variable="ae_term_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Adverse Event Term Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_arm_source" Name="ae_arm_source" DataType="text" Length="999" redcap:Variable="ae_arm_source" redcap:FieldType="text">
+		<Question><TranslatedText>Specify Study Arm Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_arm_alt" Name="ae_arm_alt" DataType="text" Length="999" redcap:Variable="ae_arm_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Specify Study Arm Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="rcrd_affected_source" Name="rcrd_affected_source" DataType="text" Length="999" redcap:Variable="rcrd_affected_source" redcap:FieldType="text">
+		<Question><TranslatedText>Affected Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="rcrd_affected_alt" Name="rcrd_affected_alt" DataType="text" Length="999" redcap:Variable="rcrd_affected_alt" redcap:FieldType="text">
+		<Question><TranslatedText>Affected Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_1_source" Name="irb_custom_1_source" DataType="text" Length="999" redcap:Variable="irb_custom_1_source" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 1 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_1_alt" Name="irb_custom_1_alt" DataType="text" Length="999" redcap:Variable="irb_custom_1_alt" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 1 Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_2_source" Name="irb_custom_2_source" DataType="text" Length="999" redcap:Variable="irb_custom_2_source" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 2 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_2_alt" Name="irb_custom_2_alt" DataType="text" Length="999" redcap:Variable="irb_custom_2_alt" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 2 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_3_source" Name="irb_custom_3_source" DataType="text" Length="999" redcap:Variable="irb_custom_3_source" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 3 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_3_alt" Name="irb_custom_3_alt" DataType="text" Length="999" redcap:Variable="irb_custom_3_alt" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 3 Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_4_source" Name="irb_custom_4_source" DataType="text" Length="999" redcap:Variable="irb_custom_4_source" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 4 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_4_alt" Name="irb_custom_4_alt" DataType="text" Length="999" redcap:Variable="irb_custom_4_alt" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 4 Alternate Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_5_source" Name="irb_custom_5_source" DataType="text" Length="999" redcap:Variable="irb_custom_5_source" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 5 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_5_alt" Name="irb_custom_5_alt" DataType="text" Length="999" redcap:Variable="irb_custom_5_alt" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom field 5 Direct Mapping</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_mapping_and_details_complete" Name="ae_mapping_and_details_complete" DataType="text" Length="1" redcap:Variable="ae_mapping_and_details_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="ae_mapping_and_details_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="subject_id_source_ws" Name="subject_id_source_ws" DataType="text" Length="999" redcap:Variable="subject_id_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>Subject ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="subject_id_alt_ws" Name="subject_id_alt_ws" DataType="text" Length="999" redcap:Variable="subject_id_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Subject ID details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_date_source_ws" Name="ae_date_source_ws" DataType="date" Length="999" redcap:Variable="ae_date_source_ws" redcap:FieldType="text" redcap:TextValidationType="date_mdy">
+		<Question><TranslatedText>Date of Adverse Event</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_date_alt_ws" Name="ae_date_alt_ws" DataType="text" Length="999" redcap:Variable="ae_date_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Date of Adverse Event: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="desc_event_source_ws" Name="desc_event_source_ws" DataType="text" Length="999" redcap:Variable="desc_event_source_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Description of events</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="desc_event_alt_ws" Name="desc_event_alt_ws" DataType="text" Length="999" redcap:Variable="desc_event_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Description of events: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="location_source_ws" Name="location_source_ws" DataType="text" Length="1" redcap:Variable="location_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Location</TranslatedText></Question>
+		<CodeListRef CodeListOID="location_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="location_alt_ws" Name="location_alt_ws" DataType="text" Length="999" redcap:Variable="location_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Location: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="severity_source_ws" Name="severity_source_ws" DataType="text" Length="1" redcap:Variable="severity_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Severity</TranslatedText></Question>
+		<CodeListRef CodeListOID="severity_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="severity_alt_ws" Name="severity_alt_ws" DataType="text" Length="999" redcap:Variable="severity_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Severity: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="expectedness_source_ws" Name="expectedness_source_ws" DataType="text" Length="1" redcap:Variable="expectedness_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Expectedness</TranslatedText></Question>
+		<CodeListRef CodeListOID="expectedness_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="expectedness_alt_ws" Name="expectedness_alt_ws" DataType="text" Length="999" redcap:Variable="expectedness_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Expectedness: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="relatedness_source_ws" Name="relatedness_source_ws" DataType="text" Length="1" redcap:Variable="relatedness_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Relatedness</TranslatedText></Question>
+		<CodeListRef CodeListOID="relatedness_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="relatedness_alt_ws" Name="relatedness_alt_ws" DataType="text" Length="999" redcap:Variable="relatedness_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Relatedness: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="corrective_source_ws" Name="corrective_source_ws" DataType="text" Length="999" redcap:Variable="corrective_source_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Requires Changes / Corrective Action</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="corrective_alt_ws" Name="corrective_alt_ws" DataType="text" Length="999" redcap:Variable="corrective_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Requires Changes / Corrective Action: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="date_reported_source_ws" Name="date_reported_source_ws" DataType="date" Length="999" redcap:Variable="date_reported_source_ws" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
+		<Question><TranslatedText>Date Reported to PHRC, if available</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="date_reported_alt_ws" Name="date_reported_alt_ws" DataType="text" Length="999" redcap:Variable="date_reported_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Date Reported to PHRC, if available: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_type_source_ws" Name="ae_type_source_ws" DataType="text" Length="1" redcap:Variable="ae_type_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Adverse Event Type</TranslatedText></Question>
+		<CodeListRef CodeListOID="ae_type_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="ae_type_alt_ws" Name="ae_type_alt_ws" DataType="text" Length="999" redcap:Variable="ae_type_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Adverse Event Type: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="assessment_type_source_ws" Name="assessment_type_source_ws" DataType="text" Length="1" redcap:Variable="assessment_type_source_ws" redcap:FieldType="select">
+		<Question><TranslatedText>Assessment Type</TranslatedText></Question>
+		<CodeListRef CodeListOID="assessment_type_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="assessment_type_alt_ws" Name="assessment_type_alt_ws" DataType="text" Length="999" redcap:Variable="assessment_type_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Assessment Type: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="additional_desc_source_ws" Name="additional_desc_source_ws" DataType="text" Length="999" redcap:Variable="additional_desc_source_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Additional Description</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="additional_desc_alt_ws" Name="additional_desc_alt_ws" DataType="text" Length="999" redcap:Variable="additional_desc_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Additional Description: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="organ_system_source_ws" Name="organ_system_source_ws" DataType="text" Length="3" redcap:Variable="organ_system_source_ws" redcap:FieldType="select" redcap:TextValidationType="autocomplete">
+		<Question><TranslatedText>Organ System Name</TranslatedText></Question>
+		<CodeListRef CodeListOID="organ_system_source_ws.choices"/>
+	</ItemDef>
+	<ItemDef OID="organ_system_alt_ws" Name="organ_system_alt_ws" DataType="text" Length="999" redcap:Variable="organ_system_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Organ System Name: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="source_vocab_source_ws" Name="source_vocab_source_ws" DataType="text" Length="999" redcap:Variable="source_vocab_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>Source Vocabulary</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="source_vocab_alt_ws" Name="source_vocab_alt_ws" DataType="text" Length="999" redcap:Variable="source_vocab_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Source Vocabulary: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_term_source_ws" Name="ae_term_source_ws" DataType="text" Length="999" redcap:Variable="ae_term_source_ws" redcap:FieldType="text" redcap:RequiredField="y">
+		<Question><TranslatedText>AE Term</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_term_alt_ws" Name="ae_term_alt_ws" DataType="text" Length="999" redcap:Variable="ae_term_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>AE Term: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_arm_source_ws" Name="ae_arm_source_ws" DataType="text" Length="999" redcap:Variable="ae_arm_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>Specify Study Arm</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_arm_alt_ws" Name="ae_arm_alt_ws" DataType="text" Length="999" redcap:Variable="ae_arm_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Specify Study Arm: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="record_details_ws" Name="record_details_ws" DataType="text" Length="999" redcap:Variable="record_details_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Record: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="admin_notes_ws" Name="admin_notes_ws" DataType="text" Length="999" redcap:Variable="admin_notes_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>Administrator Notes</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_1_source_ws" Name="irb_custom_1_source_ws" DataType="text" Length="999" redcap:Variable="irb_custom_1_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom Field 1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_1_alt_ws" Name="irb_custom_1_alt_ws" DataType="text" Length="999" redcap:Variable="irb_custom_1_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>IRB Custom Field 1: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_2_source_ws" Name="irb_custom_2_source_ws" DataType="text" Length="999" redcap:Variable="irb_custom_2_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom Field 2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_2_alt_ws" Name="irb_custom_2_alt_ws" DataType="text" Length="999" redcap:Variable="irb_custom_2_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>IRB Custom Field 2: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_3_source_ws" Name="irb_custom_3_source_ws" DataType="text" Length="999" redcap:Variable="irb_custom_3_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom Field 3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_3_alt_ws" Name="irb_custom_3_alt_ws" DataType="text" Length="999" redcap:Variable="irb_custom_3_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>IRB Custom Field 3: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_4_source_ws" Name="irb_custom_4_source_ws" DataType="text" Length="999" redcap:Variable="irb_custom_4_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom Field 4</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_4_alt_ws" Name="irb_custom_4_alt_ws" DataType="text" Length="999" redcap:Variable="irb_custom_4_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>IRB Custom Field 4: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_5_source_ws" Name="irb_custom_5_source_ws" DataType="text" Length="999" redcap:Variable="irb_custom_5_source_ws" redcap:FieldType="text">
+		<Question><TranslatedText>IRB Custom Field 5</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="irb_custom_5_alt_ws" Name="irb_custom_5_alt_ws" DataType="text" Length="999" redcap:Variable="irb_custom_5_alt_ws" redcap:FieldType="textarea">
+		<Question><TranslatedText>IRB Custom Field 5: Details</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_log_worksheet_complete" Name="ae_log_worksheet_complete" DataType="text" Length="1" redcap:Variable="ae_log_worksheet_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="ae_log_worksheet_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="subject_id" Name="subject_id" DataType="text" Length="999" redcap:Variable="subject_id" redcap:FieldType="text">
+		<Question><TranslatedText>Subject ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_date" Name="ae_date" DataType="partialDatetime" Length="999" redcap:Variable="ae_date" redcap:FieldType="text" redcap:TextValidationType="datetime_dmy">
+		<Question><TranslatedText>Date of Adverse Event</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="event_desc" Name="event_desc" DataType="text" Length="999" redcap:Variable="event_desc" redcap:FieldType="text">
+		<Question><TranslatedText>Description of events</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="location" Name="location" DataType="text" Length="1" redcap:Variable="location" redcap:FieldType="select">
+		<Question><TranslatedText>Location</TranslatedText></Question>
+		<CodeListRef CodeListOID="location.choices"/>
+	</ItemDef>
+	<ItemDef OID="severity" Name="severity" DataType="text" Length="1" redcap:Variable="severity" redcap:FieldType="select">
+		<Question><TranslatedText>Severity</TranslatedText></Question>
+		<CodeListRef CodeListOID="severity.choices"/>
+	</ItemDef>
+	<ItemDef OID="expectedness" Name="expectedness" DataType="text" Length="1" redcap:Variable="expectedness" redcap:FieldType="select">
+		<Question><TranslatedText>Expectedness</TranslatedText></Question>
+		<CodeListRef CodeListOID="expectedness.choices"/>
+	</ItemDef>
+	<ItemDef OID="relatedness" Name="relatedness" DataType="text" Length="1" redcap:Variable="relatedness" redcap:FieldType="select">
+		<Question><TranslatedText>Relatedness</TranslatedText></Question>
+		<CodeListRef CodeListOID="relatedness.choices"/>
+	</ItemDef>
+	<ItemDef OID="corrective_action" Name="corrective_action" DataType="text" Length="999" redcap:Variable="corrective_action" redcap:FieldType="text">
+		<Question><TranslatedText>Requires Changes / Corrective Action</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="date_reported" Name="date_reported" DataType="date" Length="999" redcap:Variable="date_reported" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
+		<Question><TranslatedText>Date Reported to PHRC, if available</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_irb_log_complete" Name="ae_irb_log_complete" DataType="text" Length="1" redcap:Variable="ae_irb_log_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="ae_irb_log_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="adverse_event_type" Name="adverse_event_type" DataType="text" Length="1" redcap:Variable="adverse_event_type" redcap:FieldType="select" redcap:Identifier="y" redcap:RequiredField="y">
+		<Question><TranslatedText>Adverse Event Type</TranslatedText></Question>
+		<CodeListRef CodeListOID="adverse_event_type.choices"/>
+	</ItemDef>
+	<ItemDef OID="assessment_type" Name="assessment_type" DataType="text" Length="1" redcap:Variable="assessment_type" redcap:FieldType="select">
+		<Question><TranslatedText>Assessment Type</TranslatedText></Question>
+		<CodeListRef CodeListOID="assessment_type.choices"/>
+	</ItemDef>
+	<ItemDef OID="additional_description" Name="additional_description" DataType="text" Length="999" redcap:Variable="additional_description" redcap:FieldType="text">
+		<Question><TranslatedText>Additional Description</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="organ_system_name" Name="organ_system_name" DataType="text" Length="3" redcap:Variable="organ_system_name" redcap:FieldType="select" redcap:TextValidationType="autocomplete">
+		<Question><TranslatedText>Organ System Name</TranslatedText></Question>
+		<CodeListRef CodeListOID="organ_system_name.choices"/>
+	</ItemDef>
+	<ItemDef OID="source_vocabulary" Name="source_vocabulary" DataType="text" Length="999" redcap:Variable="source_vocabulary" redcap:FieldType="text">
+		<Question><TranslatedText>Source Vocabulary</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="ae_term" Name="ae_term" DataType="text" Length="999" redcap:Variable="ae_term" redcap:FieldType="text" redcap:RequiredField="y">
+		<Question><TranslatedText>AE Term</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="clinicaltrials_ae_log_complete" Name="clinicaltrials_ae_log_complete" DataType="text" Length="1" redcap:Variable="clinicaltrials_ae_log_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="clinicaltrials_ae_log_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="numevents" Name="numevents" DataType="text" Length="999" redcap:Variable="numevents" redcap:FieldType="text">
+		<Question><TranslatedText>Number of Events:</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="numsubjectsaffected" Name="numsubjectsaffected" DataType="text" Length="999" redcap:Variable="numsubjectsaffected" redcap:FieldType="text" redcap:RequiredField="y">
+		<Question><TranslatedText>Number of Subjects Affected:</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="numsubjectsatrisk" Name="numsubjectsatrisk" DataType="text" Length="999" redcap:Variable="numsubjectsatrisk" redcap:FieldType="text" redcap:RequiredField="y">
+		<Question><TranslatedText>Number of Subjects at Risk</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="clinicaltrails_ae_arm_total_complete" Name="clinicaltrails_ae_arm_total_complete" DataType="text" Length="1" redcap:Variable="clinicaltrails_ae_arm_total_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="clinicaltrails_ae_arm_total_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="ae_mapping_and_details_complete.choices" Name="ae_mapping_and_details_complete" DataType="text" redcap:Variable="ae_mapping_and_details_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="location_source_ws.choices" Name="location_source_ws" DataType="text" redcap:Variable="location_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Internal</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>External</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9"><Decode><TranslatedText>Temp</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="severity_source_ws.choices" Name="severity_source_ws" DataType="text" redcap:Variable="severity_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Serious</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Non-Serious</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="expectedness_source_ws.choices" Name="expectedness_source_ws" DataType="text" redcap:Variable="expectedness_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Expected</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Unexpected</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="relatedness_source_ws.choices" Name="relatedness_source_ws" DataType="text" redcap:Variable="relatedness_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Relates</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Possibly Related</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Unrelated</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="ae_type_source_ws.choices" Name="ae_type_source_ws" DataType="text" redcap:Variable="ae_type_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Serious</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9"><Decode><TranslatedText>Other</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="assessment_type_source_ws.choices" Name="assessment_type_source_ws" DataType="text" redcap:Variable="assessment_type_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Systematic Assessment</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Non-systematic Assessment</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="organ_system_source_ws.choices" Name="organ_system_source_ws" DataType="text" redcap:Variable="organ_system_source_ws">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="10"><Decode><TranslatedText>Blood and Lymphatic System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="20"><Decode><TranslatedText>Cardiac Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="30"><Decode><TranslatedText>Congenital, Familial and Genetic Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="40"><Decode><TranslatedText>Ear and Labyrinth Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="50"><Decode><TranslatedText>Endocrine Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="60"><Decode><TranslatedText>Eye Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="70"><Decode><TranslatedText>Gastrointestinal Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="80"><Decode><TranslatedText>General Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="90"><Decode><TranslatedText>Hepatobiliary Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="100"><Decode><TranslatedText>Immune System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="110"><Decode><TranslatedText>Infections and Infestations</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="120"><Decode><TranslatedText>Injury, Poisoning and Procedural Complications</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="130"><Decode><TranslatedText>Investigations</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="140"><Decode><TranslatedText>Metabolism and Nutrition Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="150"><Decode><TranslatedText>Musculoskeletal and Connective Tissue Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="160"><Decode><TranslatedText>Neoplasms Benign, Malignant and Unspecified (Including Cysts and Polyps)</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="170"><Decode><TranslatedText>Nervous System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="180"><Decode><TranslatedText>Pregnancy, Puerperium and Perinatal Conditions</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="190"><Decode><TranslatedText>Product Issues</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="200"><Decode><TranslatedText>Psychiatric Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="210"><Decode><TranslatedText>Renal and Urinary Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="220"><Decode><TranslatedText>Reproductive System and Breast Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="230"><Decode><TranslatedText>Respiratory, Thoracic and Mediastinal Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="240"><Decode><TranslatedText>Skin and Subcutaneous Tissue Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="250"><Decode><TranslatedText>Social Circumstances</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="260"><Decode><TranslatedText>Surgical and Medical Procedures</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="270"><Decode><TranslatedText>Vascular Disorders</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="ae_log_worksheet_complete.choices" Name="ae_log_worksheet_complete" DataType="text" redcap:Variable="ae_log_worksheet_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="location.choices" Name="location" DataType="text" redcap:Variable="location">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Internal (Partners)</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>External (Coordinating Sites)</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="severity.choices" Name="severity" DataType="text" redcap:Variable="severity">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Serious</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Non-Serious</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="expectedness.choices" Name="expectedness" DataType="text" redcap:Variable="expectedness">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Expected</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Unexpected</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="relatedness.choices" Name="relatedness" DataType="text" redcap:Variable="relatedness">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Relates</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Possibly Related</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Unrelated</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="ae_irb_log_complete.choices" Name="ae_irb_log_complete" DataType="text" redcap:Variable="ae_irb_log_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="adverse_event_type.choices" Name="adverse_event_type" DataType="text" redcap:Variable="adverse_event_type">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Serious</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9"><Decode><TranslatedText>Other</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="assessment_type.choices" Name="assessment_type" DataType="text" redcap:Variable="assessment_type">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Systematic Assessment</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Non-systematic Assessment</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="organ_system_name.choices" Name="organ_system_name" DataType="text" redcap:Variable="organ_system_name">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>No Data Available</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="10"><Decode><TranslatedText>Blood and Lymphatic System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="20"><Decode><TranslatedText>Cardiac Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="30"><Decode><TranslatedText>Congenital, Familial and Genetic Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="40"><Decode><TranslatedText>Ear and Labyrinth Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="50"><Decode><TranslatedText>Endocrine Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="60"><Decode><TranslatedText>Eye Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="70"><Decode><TranslatedText>Gastrointestinal Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="80"><Decode><TranslatedText>General Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="90"><Decode><TranslatedText>Hepatobiliary Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="100"><Decode><TranslatedText>Immune System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="110"><Decode><TranslatedText>Infections and Infestations</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="120"><Decode><TranslatedText>Injury, Poisoning and Procedural Complications</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="130"><Decode><TranslatedText>Investigations</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="140"><Decode><TranslatedText>Metabolism and Nutrition Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="150"><Decode><TranslatedText>Musculoskeletal and Connective Tissue Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="160"><Decode><TranslatedText>Neoplasms Benign, Malignant and Unspecified (Including Cysts and Polyps)</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="170"><Decode><TranslatedText>Nervous System Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="180"><Decode><TranslatedText>Pregnancy, Puerperium and Perinatal Conditions</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="190"><Decode><TranslatedText>Product Issues</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="200"><Decode><TranslatedText>Psychiatric Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="210"><Decode><TranslatedText>Renal and Urinary Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="220"><Decode><TranslatedText>Reproductive System and Breast Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="230"><Decode><TranslatedText>Respiratory, Thoracic and Mediastinal Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="240"><Decode><TranslatedText>Skin and Subcutaneous Tissue Disorders</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="250"><Decode><TranslatedText>Social Circumstances</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="260"><Decode><TranslatedText>Surgical and Medical Procedures</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="270"><Decode><TranslatedText>Vascular Disorders</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="clinicaltrials_ae_log_complete.choices" Name="clinicaltrials_ae_log_complete" DataType="text" redcap:Variable="clinicaltrials_ae_log_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="clinicaltrails_ae_arm_total_complete.choices" Name="clinicaltrails_ae_arm_total_complete" DataType="text" redcap:Variable="clinicaltrails_ae_arm_total_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+</ODM>

@@ -1,0 +1,146 @@
+{
+	"name": "Adverse Event Reporting",
+
+	"namespace": "HarvardCatalystPartnersHealthCare\\AEreporting",
+
+	"authors": [
+		{
+			"name": "Ed Morales",
+			"email": "emorales7@partners.org",
+			"institution": "Harvard Catalyst | Partners HealthCare"
+		}
+	],
+
+	"permissions": [
+		"REDCap's API",
+		"REDCAP::getData",
+		"REDCAP::saveData",
+		"REDCAP::getDataDictionary"
+	],
+
+	"description": "Application that facilitates the creation of Adverse Event (AE) reports aiming to create the Clinical-Trails.gov (CT) AE template. It also creates a generalized IRB AE template, as well as an FDA AE Template. The application allows for two modes of operation: 1) it can connect and load data from an existing REDCap project , 2) it can act as an additional REDCap project that collects AE data. In both cases it provides means for aggregating the project's adverse event data, and thus creating the mentioned AE reports. Its goal is to eliminate aggregation steps,  minimize redundant steps, and successfully create the CT AE template. Read its documentation to get started.",
+
+	"links": {
+		"project": [
+			{
+				"name": "AE Reporting",
+				"icon": "brick",
+				"url": "index.php"
+			}
+		]
+	},
+
+  "system-settings": [
+    {
+      "key": "irb-contact-info",
+      "name": "<b>Set IRB Contact Information:</b> <br> *These settings are meant to direct end-users to the IRB for IRB related questions",
+      "type": "descriptive",
+      "required": false
+    },
+    {
+      "key": "irb-website",
+      "name": "IRB's website (i.e https://uofu.edu/irb.html)",
+      "type": "text",
+      "required": false
+    },
+    {
+      "key": "irb-phone-number",
+      "name": "IRB's phone number",
+      "type": "text",
+      "required": false
+    },
+	{
+	  "key": "irb-optional-fields",
+	  "name": "<b>Customize IRB fields:</b> <br> *Enable/disable standard IRB fields by clicking on the corresponding checkbox <br> *Add and customize up to 5 additional fields.<br> *Adding a field label enables the custom field",
+	  "type": "descriptive",
+	  "required": false
+	},
+    {
+ 	  "key": "date-adverse-event",
+	  "name": "Date of Adverse Event",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "description-event",
+	  "name": "Description of events",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "location",
+	  "name": "Location",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "severity",
+	  "name": "Severity",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+    {
+	  "key": "expectedness",
+	  "name": "Expectedness",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "relatedness",
+	  "name": "Relatedness",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "corrective-actions",
+	  "name": "Requires Changes / Corrective Action",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "date-reported",
+	  "name": "Date Reported to PHRC, if available",
+	  "required": false,
+	  "type": "checkbox",
+	  "repeatable": false
+	},
+	{
+	  "key": "irb_custom_1",
+	  "name": "Custom IRB field #1",
+	  "type": "text",
+	  "required": false
+	},
+	{
+	  "key": "irb_custom_2",
+	  "name": "Custom IRB field #2",
+	  "type": "text",
+	  "required": false
+	},
+	{
+	  "key": "irb_custom_3",
+	  "name": "Custom IRB field #3",
+	  "type": "text",
+	  "required": false
+	},
+	{
+	  "key": "irb_custom_4",
+	  "name": "Custom IRB field #4",
+	  "type": "text",
+	  "required": false
+	},
+	{
+	  "key": "irb_custom_5",
+	  "name": "Custom IRB field #5",
+	  "type": "text",
+	  "required": false
+	}
+
+  ]
+}
