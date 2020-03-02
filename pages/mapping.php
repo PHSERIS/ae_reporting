@@ -190,6 +190,7 @@ if(isset($ct_tx_a[$cases_ct[0]][$event_id_ct]['token']) && sizeof($ct_tx_a[$case
             <li>Ensure a valid API token is saved in Mapping >> Settings</li>
             <li>The API token must have export rights</li>
             <li>Ensure that at least two fields are present in your source project</li>
+            <li>Ensure REDCap's base URL has been defined in the Control Center</li>
             <li>This external module only works with secure connections (i.e. using "https")</li>
             <li>Please read the section on the documentation on API Token Requirements.</li>
         </ol>
@@ -394,7 +395,7 @@ if(isset($ct_tx_a[$cases_ct[0]][$event_id_ct]['token']) && sizeof($ct_tx_a[$case
     <br><b>Load Data From Mappings</b>
     <span class="closebtn1" onclick="closeSettings('snackbar_load')">×</span> <br><br>
     <input type="checkbox" id="all" name="all_maps" checked disabled> Import all Mappings <br>
-
+    <span style="font-size: small">Load rate: 1.2-seconds/record</span>
     <br>
     <input class ="save" type="submit" value="Load Now" id="load_data_from_mappings">
     <br>

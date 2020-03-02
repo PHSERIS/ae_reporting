@@ -157,7 +157,7 @@ function build_dropdown_choices_4_events($event_names, $selected_field)
 
 function access_event_names_xproject($token)
 {
-
+    global $redcap_base_url;
     $data = array(
         'token' => $token,
         'content' => 'event',
@@ -166,7 +166,8 @@ function access_event_names_xproject($token)
         'returnFormat' => 'json'
     );
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
+    curl_setopt($ch, CURLOPT_URL, $redcap_base_url.'api/');
+//    curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_VERBOSE, 0);
@@ -191,6 +192,7 @@ function access_event_names_xproject($token)
 
 function access_dd_other_project($token)
 {
+    global $redcap_base_url;
     $data = array(
         'token' => $token,
         'content' => 'metadata',
@@ -198,7 +200,8 @@ function access_dd_other_project($token)
         'returnFormat' => 'json'
     );
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
+    curl_setopt($ch, CURLOPT_URL, $redcap_base_url.'api/');
+//    curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_VERBOSE, 0);
@@ -211,7 +214,7 @@ function access_dd_other_project($token)
     $output = curl_exec($ch);
 
     $dd_array = json_decode($output, true);
-
+//    var_dump($dd_array);
     curl_close($ch);
 
     $dd_fields = [];

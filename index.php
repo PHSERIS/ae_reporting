@@ -8,6 +8,7 @@ use ExternalModules\AbstractExternalModule as AbsEM;
 include_once dirname(__FILE__)."/pages/classes/common.php";
 
 global $Proj;
+global $redcap_base_url; // use this one!!!!
 
 if (!isset($project_id)) {
     die('Project ID is a required field @ Index');
@@ -29,7 +30,6 @@ if(isset($API_settings[$cases_ct_api[0]][$event_id_ct_api]['token']) && sizeof($
     $dd_fields = access_dd_other_project($token);
     $warning = (sizeof($dd_fields) > 1 ? false : true); // returns true
 }
-
 
 ?>
     <html style="
@@ -106,6 +106,7 @@ if(isset($API_settings[$cases_ct_api[0]][$event_id_ct_api]['token']) && sizeof($
                 <li>Ensure a valid API token is saved in Mapping >> Settings</li>
                 <li>The API token must have export rights</li>
                 <li>Ensure that at least two fields are present in your source project</li>
+                <li>Ensure REDCap's base URL has been defined in the Control Center</li>
                 <li>This external module only works with secure connections (i.e. using "https")</li>
                 <li>Please read the section on the documentation on API Token Requirements.</li>
             </ol>

@@ -3,7 +3,7 @@
 namespace HarvardCatalystPartnersHealthCare\AEreporting;
 
 use REDCap as REDCap;
-
+global $redcap_base_url;
 include_once dirname(__FILE__)."/classes/common.php";
 
 $project_id = $_POST["pid"];
@@ -87,7 +87,8 @@ if ($mappings['unique_event_name_source'] != "undefined") {
 
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
+curl_setopt($ch, CURLOPT_URL, $redcap_base_url.'api/');
+//curl_setopt($ch, CURLOPT_URL, 'https://' . $_SERVER["SSL_TLS_SNI"] . '/redcap/api/');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
